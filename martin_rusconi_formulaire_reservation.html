@@ -1,0 +1,142 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@400;600&display=swap');
+  .fr-wrap { background: #111; color: #fff; font-family: 'Inter', sans-serif; padding: 2rem 1rem; max-width: 480px; margin: 0 auto; }
+  .fr-header { text-align: center; margin-bottom: 2rem; }
+  .fr-logo { font-family: 'Oswald', sans-serif; font-size: 24px; font-weight: 700; letter-spacing: 2px; color: #fff; }
+  .fr-title { font-family: 'Oswald', sans-serif; font-size: 32px; font-weight: 700; color: #C6F135; margin: 8px 0 4px; }
+  .fr-desc { font-size: 13px; color: #aaa; line-height: 1.7; margin-top: 8px; }
+  .fr-warning { background: #1a1a00; border: 1px solid #C6F135; border-radius: 8px; padding: 10px 14px; font-size: 12px; color: #C6F135; margin-top: 12px; line-height: 1.6; }
+  .fr-block { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem; }
+  .fr-label { font-size: 13px; font-weight: 600; color: #fff; margin-bottom: 8px; display: block; }
+  .fr-label span { color: #C6F135; }
+  .fr-sublabel { font-size: 11px; color: #666; margin-bottom: 10px; display: block; }
+  .fr-input { width: 100%; background: #111; border: 1px solid #333; border-radius: 8px; color: #fff; font-family: 'Inter', sans-serif; font-size: 14px; padding: 10px 12px; box-sizing: border-box; outline: none; }
+  .fr-input:focus { border-color: #C6F135; }
+  .fr-radio-group, .fr-check-group { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+  .fr-radio-row, .fr-check-row { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+  .fr-radio-row input[type=radio], .fr-check-row input[type=checkbox] { accent-color: #C6F135; width: 16px; height: 16px; cursor: pointer; }
+  .fr-radio-row label, .fr-check-row label { font-size: 14px; color: #ccc; cursor: pointer; }
+  .fr-grid { display: grid; grid-template-columns: auto 1fr 1fr 1fr 1fr; gap: 6px; margin-top: 8px; font-size: 12px; }
+  .fr-grid-head { color: #C6F135; font-weight: 600; text-align: center; padding: 4px; }
+  .fr-grid-row-label { color: #ccc; display: flex; align-items: center; padding-right: 8px; }
+  .fr-grid-cell { display: flex; align-items: center; justify-content: center; }
+  .fr-grid-cell input { accent-color: #C6F135; width: 16px; height: 16px; cursor: pointer; }
+  .fr-other { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+  .fr-other-input { flex: 1; background: #111; border: none; border-bottom: 1px solid #444; color: #fff; font-size: 13px; padding: 4px 0; outline: none; font-family: 'Inter', sans-serif; }
+  .fr-other-input:focus { border-bottom-color: #C6F135; }
+  .fr-submit { background: #C6F135; color: #111; font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 1px; border: none; border-radius: 8px; padding: 14px; width: 100%; cursor: pointer; margin-top: 1rem; }
+  .fr-submit:hover { background: #d4ff3d; }
+  .fr-footer { font-size: 11px; color: #555; text-align: center; margin-top: 12px; line-height: 1.7; }
+  .fr-section-tag { font-size: 10px; letter-spacing: 2px; color: #C6F135; text-transform: uppercase; margin-bottom: 6px; display: block; }
+</style>
+
+<div class="fr-wrap">
+  <div class="fr-header">
+    <div class="fr-logo">MARTIN RUSCONI</div>
+    <div class="fr-title">RÉSERVATION</div>
+    <div class="fr-desc">J'aurais besoin de quelques informations complémentaires afin de confirmer ma disponibilité.<br><br>Après étude de vos réponses, je vous contacterai pour procéder au règlement.</div>
+    <div class="fr-warning">⚠️ Conservez le mail récapitulatif de vos réponses afin d'y rajouter vos horaires de départ dès qu'ils vous seront communiqués.</div>
+  </div>
+
+  <div class="fr-block">
+    <span class="fr-section-tag">01 — Contact</span>
+    <label class="fr-label">Email <span>*</span></label>
+    <input class="fr-input" type="email" placeholder="votre@email.com" />
+  </div>
+
+  <div class="fr-block">
+    <span class="fr-section-tag">02 — Formule</span>
+    <label class="fr-label">Formule choisie <span>*</span></label>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:4px;">
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="color:#C6F135;font-size:11px;letter-spacing:1px;font-weight:600;margin-bottom:2px;">TARIF</div>
+        <div class="fr-radio-row"><input type="radio" name="tarif" id="solo"><label for="solo">Solo</label></div>
+        <div class="fr-radio-row"><input type="radio" name="tarif" id="duo"><label for="duo">Duo</label></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="color:#C6F135;font-size:11px;letter-spacing:1px;font-weight:600;margin-bottom:2px;">FORMAT</div>
+        <div class="fr-radio-row"><input type="radio" name="format" id="photos"><label for="photos">Photos</label></div>
+        <div class="fr-radio-row"><input type="radio" name="format" id="video"><label for="video">Vidéo</label></div>
+        <div class="fr-radio-row"><input type="radio" name="format" id="photovideo"><label for="photovideo">Photos + Vidéo</label></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fr-block">
+    <span class="fr-section-tag">03 — Événement</span>
+    <label class="fr-label">Nom de l'événement / course <span>*</span></label>
+    <div class="fr-radio-group">
+      <div class="fr-radio-row"><input type="radio" name="event" id="e1"><label for="e1">Hyrox Lyon (21 au 24 Mai)</label></div>
+      <div class="fr-radio-row"><input type="radio" name="event" id="e2"><label for="e2">Hyrox Bordeaux (30/09 au 04/10)</label></div>
+      <div class="fr-radio-row"><input type="radio" name="event" id="e3"><label for="e3">Hyrox Nice (29/10 au 01/11)</label></div>
+      <div class="fr-radio-row"><input type="radio" name="event" id="e4"><label for="e4">Hyrox Paris (12 au 20/12)</label></div>
+      <div class="fr-other">
+        <input type="radio" name="event" id="eother">
+        <label for="eother" style="font-size:14px;color:#ccc;">Autre :</label>
+        <input class="fr-other-input" type="text" placeholder="préciser date & lieu" />
+      </div>
+    </div>
+  </div>
+
+  <div class="fr-block">
+    <span class="fr-section-tag">04 — Catégorie</span>
+    <label class="fr-label">Catégorie <span>*</span></label>
+    <div class="fr-radio-group">
+      <div class="fr-radio-row"><input type="radio" name="categorie" id="cs"><label for="cs">Solo</label></div>
+      <div class="fr-radio-row"><input type="radio" name="categorie" id="cd"><label for="cd">Duo</label></div>
+      <div class="fr-other">
+        <input type="radio" name="categorie" id="cother">
+        <label for="cother" style="font-size:14px;color:#ccc;">Autre :</label>
+        <input class="fr-other-input" type="text" placeholder="préciser" />
+      </div>
+    </div>
+  </div>
+
+  <div class="fr-block">
+    <span class="fr-section-tag">05 — Planning</span>
+    <label class="fr-label">Jour et horaire de passage</label>
+    <span class="fr-sublabel">Plusieurs réponses possibles</span>
+    <div class="fr-grid">
+      <div></div>
+      <div class="fr-grid-head">Matin</div>
+      <div class="fr-grid-head">Midi</div>
+      <div class="fr-grid-head">A-midi</div>
+      <div class="fr-grid-head">Soir</div>
+      <div class="fr-grid-row-label">Lundi</div>
+      <div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div>
+      <div class="fr-grid-row-label">Mardi</div>
+      <div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div>
+      <div class="fr-grid-row-label">Mercredi</div>
+      <div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div>
+      <div class="fr-grid-row-label">Jeudi</div>
+      <div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div>
+      <div class="fr-grid-row-label">Vendredi</div>
+      <div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div>
+      <div class="fr-grid-row-label">Samedi</div>
+      <div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div>
+      <div class="fr-grid-row-label">Dimanche</div>
+      <div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div><div class="fr-grid-cell"><input type="checkbox"></div>
+    </div>
+  </div>
+
+  <div class="fr-block">
+    <span class="fr-section-tag">06 — Heure</span>
+    <label class="fr-label">Heure de départ estimée</label>
+    <input class="fr-input" type="time" />
+  </div>
+
+  <div class="fr-block">
+    <span class="fr-section-tag">07 — Identité</span>
+    <label class="fr-label">Nom & Prénom <span>*</span></label>
+    <input class="fr-input" type="text" placeholder="Prénom Nom" style="margin-bottom:12px;" />
+    <label class="fr-label">Téléphone WhatsApp <span>*</span></label>
+    <span class="fr-sublabel">On se contacte avant la course</span>
+    <input class="fr-input" type="tel" placeholder="+33 6 XX XX XX XX" style="margin-bottom:12px;" />
+    <label class="fr-label">Pseudo Instagram <span style="color:#666;font-weight:400;">(optionnel)</span></label>
+    <input class="fr-input" type="text" placeholder="@ton_pseudo" />
+  </div>
+
+  <button class="fr-submit">ENVOYER MA RÉSERVATION →</button>
+  <div class="fr-footer">Paiement en 1x pour valider la réservation.<br>En soumettant ce formulaire, vous autorisez l'utilisation de votre contenu à des fins de communication, sauf indication contraire.</div>
+</div>
